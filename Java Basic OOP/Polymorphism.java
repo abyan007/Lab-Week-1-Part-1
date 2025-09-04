@@ -1,42 +1,29 @@
 class Animal {
-    String name;
-    Animal(String name) {
-        this.name = name;
-    }
-
     void sound() {
         System.out.println("Hewan bersuara...");
     }
 }
 
-class Dog extends Animal {
-    Dog(String name) {
-        super(name);
-    }
-
+class Cat extends Animal {
     @Override
     void sound() {
-        System.out.println(name + " menggonggong: Woof!");
+        System.out.println("Kucing mengeong");
     }
 }
 
-class Cat extends Animal {
-    Cat(String name) {
-        super(name);
-    }
-
+class Dog extends Animal {
     @Override
     void sound() {
-        System.out.println(name + " mengeong: Meow!");
+        System.out.println("Anjing menggonggong");
     }
 }
 
 public class Polymorphism {
     public static void main(String[] args) {
-        Animal a1 = new Dog("Tommy");
-        Animal a2 = new Cat("Kitty");
+        Animal a1 = new Cat();
+        Animal a2 = new Dog();
 
-        a1.sound(); // Dog
-        a2.sound(); // Cat
+        a1.sound();
+        a2.sound(); 
     }
 }
